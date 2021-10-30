@@ -7,12 +7,12 @@
 <style>
 /*Css viewcontent*/
 .container-viewcontent {
-	display: flex;// hello everybody
+	display: flex;// hello quocdung
 }
 
 /*Css viewcontents*/
 .viewcontents-container {
-	height: 5%;
+	height: 5%; //hello quocdung
 }
 
 .viewcontents-container i {
