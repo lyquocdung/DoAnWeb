@@ -5,25 +5,48 @@
 <html>
 <head>
 <style type="text/css">
-.header_edt {
-	background-color: red;
-	color: #FFF;
-	border-collapse: collapse;
-	border: 1px solid black;
-	width: 96%;
-	margin-left: 20px;
-	height: 30px;
+.row-main{
+	border-radius: 4px;}
+.head_edt p {
+	border-top-left-radius: 4px;
+    background: red;
+    border-top-right-radius: 4px;
+    margin-bottom: 0px;
+    width: 95%;
+    margin-left: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    display: inline-block;
+    border: 1px solid black;
+    padding-left:16px;
+}
+.head_edt {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+.nameedt {
+  background: white;
+    margin: 20px 0;
+    padding: 10px;
+    border-radius: 20px;
+  
+}
+
+.body_edt {
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
 }
 
 .body_edt {
 	background-color: white;
 	color: black;
 	border: 1px solid black;
-	width: 96%;
+	width: 95%;
 	height: 90%;
 	margin-left: 20px;
 	display: inline-block;
 	vertical-align: middle;
+	 padding-left:16px;
 }
 b {
     margin-bottom: 6px;
@@ -37,17 +60,38 @@ b {
 	height:25px;
 	border-radius: 4px;
 	padding-left: 10px;
+	border-color: gray;
+    border-width: 1px;
 }
+
 .textdes{
 	width: 90%;
 	margin-left:16px;
 	height:50px;
+	border-color: gray;
+    border-width: 1px;
+    border-radius: 4px;
 }
-
+.textemail{
+	font-weight:bold;
+	margin-left:16px;
+}
 .btn_submit {
     margin-bottom: 16px;
     margin-left: 16px;
     margin-top:10px;
+    background:white;
+    border-color: gray;
+    border-width: 1px;
+    border-radius: 4px;
+    padding:5px
+}
+.btn_reset{
+	background:white;
+    border-color: gray;
+    border-width: 1px;
+    border-radius: 4px;
+    padding:5px
 }
 
 
@@ -64,9 +108,10 @@ b {
 				<h1 style="margin-top: 2%;">Edit Profile</h1>
 				<hr />
 				<div class="edt_table">
-					<div class="header_edt">
-						<a style="vertical-align: middle; margin-left: 20px;">Profile
-							form elements</a>
+					<div class="head_edt"> 
+						<p>Profile form elements</p>
+					</div>
+						
 					</div>
 					<div class="body_edt">
 						<p>
@@ -87,8 +132,8 @@ b {
 							<b>Email</b>
 						</p>
 						<p>
-								<input class="text" type="email"
-									placeholder="your_email@example.com" style="border-style: none"></input>
+								<input class="textemail" type="email"
+									placeholder="your_email@example.com" style="border-style: none;"></input>
 							</p>
 						<p>
 							<b>Phone</b>
