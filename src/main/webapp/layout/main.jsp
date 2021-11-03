@@ -1,10 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-<%@ taglib prefix="titles" uri="http://tiles.apache.org/tags-tiles"%>
+<%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles"%>
 <!DOCTYPE html>
 <html>
 <head>
-<title><tiles:getAsString name="titles"/></title>
+<title><tiles:getAsString name="title" /></title>
 <style type="text/css">
 * {
   box-sizing: border-box;
@@ -17,9 +17,14 @@ body {
 header {
 	text-align: center;
 	padding: 20px;
-	height: 100px;
-	border: 1px solid blue;
+	height: 6%;
+	background:#f8f8f8;
+	border-width: 1px;
+    border-color:#f4f4f4;
+    border-style: groove;
+	
 }
+
 
 /* Clear floats after the columns */
 .row:after {
@@ -30,33 +35,28 @@ header {
 
 aside {
 	float: left;
-	width: 20%;
-	border: 1px solid green;
+	width: 16%;
+	background:#f8f8f8;
+	border-width: 1px;
+    border-color:#f4f4f4;
+    border-style: groove;
 	padding: 10px;
-	min-height: 500px;
+	min-height:94%;
 }
 
 section {
 	float: left;
-	width: 80%;
-	border: 1px solid red;
+	width:84%;
 	padding: 10px;
-	min-height: 500px;
+	min-height:94%;
 }
 
-footer {
-	text-align: center;
-	padding: 10px;
-	height: 50px;
-	border: 1px solid blue;
-}
 </style>
 </head>
 <body>
 	<header>
 		<tiles:insertAttribute name="header" />
 	</header>
-	
 	<div class="row">
 		<aside>
 			<tiles:insertAttribute name="menu" />
@@ -66,6 +66,5 @@ footer {
 		</section>
 	</div>
 
-	
 </body>
 </html>
