@@ -31,8 +31,8 @@
 .dropdown-menu a {
 	color: black;
 	padding-bottom: 10px;
-	padding-left:20px;
-	padding-top:10px;
+	padding-left: 20px;
+	padding-top: 10px;
 	text-decoration: none;
 	display: block;
 }
@@ -51,22 +51,24 @@
 }
 /*Css*/
 .container-Header {
-	border:1px solid #ccc;
-            background-color:#f9f9f9;
-            color:white;  
-            width: 100%;
-    		height: 50px;
+	border: 1px solid #ccc;
+	background-color: #f9f9f9;
+	color: white;
+	width: 100%;
+	height: 50px;
 }
 
 .container-Header .row {
 	display: flex;
 	justify-content: space-between;
 }
+
 h1 {
-    font-size: larger;
-    padding-left: 10px;
-        color: blue;
+	font-size: larger;
+	padding-left: 10px;
+	color: blue;
 }
+
 .logocms {
 	padding-left: 0.5%;
 }
@@ -74,10 +76,11 @@ h1 {
 .dropdown-menu a i {
 	margin-right: 10px;
 }
-.logocms h1{
+
+.logocms h1 {
 	font-size: larger;
-    padding-left: 10px;
-    color: black;
+	padding-left: 10px;
+	color: black;
 }
 </style>
 <meta charset="ISO-8859-1">
@@ -94,8 +97,7 @@ h1 {
 			<div class="dropdown">
 				<button class="dropbtn">
 					<h1>
-						<i class="fas fa-user"></i>
-						<i class="fas fa-sort-down"></i>
+						<i class="fas fa-user"></i> <i class="fas fa-sort-down"></i>
 					</h1>
 				</button>
 				<div class="dropdown-menu">
