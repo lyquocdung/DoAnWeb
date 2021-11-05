@@ -13,7 +13,6 @@
 	<name>DoAnWeb Maven Webapp</name>
 	<!-- FIXME change it to the project's website -->
 	<url>http://www.example.com</url>
-
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.7</maven.compiler.source>
@@ -46,7 +45,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>JSPandTiles</finalName>
+		<finalName>DoAnWeb</finalName>
 		<pluginManagement><!-- lock down plugins versions to avoid using Maven 
 				defaults (may be moved to parent pom) -->
 			<plugins>
