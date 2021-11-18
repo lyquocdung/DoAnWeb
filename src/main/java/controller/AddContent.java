@@ -31,7 +31,7 @@ public class AddContent extends HttpServlet {
 		DAOContent dao = new DAOContent();
 		dao.insertContent(title,brief,content, createddate, createddate);
 		
-		request.setAttribute("message", "Update Successfully");
+		request.setAttribute("message", "Insert Successfully");
 		request.getRequestDispatcher("formcontent.tiles").forward(request, response);
 			}
 

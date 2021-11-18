@@ -14,15 +14,15 @@
    width:70%;
     
 }
-.add-content .header{
+.add-content .text-add-content{
     margin-left: 2.5%;   
 }
-.add-content .form-content{
+.add-content .form-add-content{
     margin: 16px 32px;
     border: 1px solid rgb(221, 221, 221);
     border-radius: 4px;
 }
-.add-content.title{
+.add-content .title{
     margin-top:0;
     padding: 12px 16px ;
     border-bottom: 1px solid rgb(221, 221, 221);
@@ -52,6 +52,8 @@
     margin-top: -8px;
     cursor: pointer;
 }
+
+
 </style>
 <meta charset="ISO-8859-1">
 <title>View Contents</title>
@@ -59,7 +61,7 @@
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
 </head>
 <body>
-	<script type="text/javascript">
+	<!-- <script type="text/javascript">
 		function validateFormContent() {
 			var arr = document.getElementsByTagName('input');
 			var title = arr[1].value;
@@ -70,73 +72,73 @@
 			if (!title || !brief || !content) {
 				alert(" Can't blank!");
 				return false;
-			} else if (title.length < 10 || brief.length < 30 || content.length < 50) {
+			} else if (title.length < 10 || brief.length < 30
+					|| content.length < 50) {
 				alert("Insufficient number of characters!");
 				return false;
 			}
-
 		}
-	</script>
+	</script> -->
 	<div class="add-content">
 		<c:if test="${id == null}">
-			<h1 class="header">Add Content</h1>
+			<h1 class="text-add-content">Add Content</h1>
 		</c:if>
 		<c:if test="${id != null}">
-			<h1 class="header">Edit Content</h1>
+			<h1 class="text-add-content">Edit Content</h1>
 		</c:if>
 		<hr />
 		<c:if test="${id == null}">
-		<p style="margin: 0; padding: 0; color: green; font-size: x-large">${message}</p>
-			<form class="form-content" action="AddContent" method="post">
-
+		
+			<form class="form-add-content" action="AddContent" method="post">
+				<p style="margin: 0; padding: 0; color: green">${message}</p>
 
 				<p class="title">Content Form Elements</p>
 
 				<div class="row-form">
-					<label for="title">Title</label> <input type="text" class="textbox" maxlength="200" id="title" name="Title" placeholder="Enter the title">
+					<label for="title">Title</label> 
+					<input type="text" class="textbox" id="title" name="title" placeholder="Enter the title" maxlength="200" >
 				</div>
 
 				<div class="row-form">
 					<label for="brief">Brief</label>
-					<textarea name="Brief" id="brief" rows="3" class="textbox"  maxlength="150"></textarea>
+					<textarea name="brief" id="brief" rows="3" class="textbox" maxlength="150"></textarea>
 				</div>
 
 				<div class="row-form">
 					<label for="content">Content</label>
-					<textarea name="Content" id="content" rows="9" class="textbox" maxlength="1000"></textarea>
+					<textarea name="content" id="content" rows="9" class="textbox" maxlength="1000"></textarea>
 				</div>
 
 				<div class="row-form">					
-					<button class="button" onClick = "validateFormContent()" type="submit" name="submit" value="submit">Submit Button</button>
+					<button class="button" type="submit" name="submit" value="submit">Submit Button</button>
 					<button class="button" type="reset">Reset Button</button>
 				</div>
 			</form>
 		</c:if>
 		<c:if test="${id != null}">
-			<form class="form-content" action="EditContent" method="post">
-				<p style="margin: 0; padding: 0; color: green; font-size: x-large">${message}</p>
-				
+			<form class="form-add-content" action="EditContent" method="post">
+				<p style="margin: 0; padding: 0; color: green">${message}</p>
+
 				<p class="title">Content Form Elements</p>
-				
-				<br /> <input type="hidden" name="id" value="<c:out value='${id}' />" />
-				
+
 				<div class="row-form">
+					<input type="hidden" name="id" value="<c:out value='${id}' />" /> 
 					<label for="title">Title</label> 
-					<input type="text" class="textbox" maxlength="200" id="title" name="Title" value="${title}" placeholder="Enter the title">
+					<input type="text" class="textbox" id="title" name="title" placeholder="Enter the title" value="${title}" maxlength="200">
 				</div>
 
 				<div class="row-form">
 					<label for="brief">Brief</label>
-					<textarea name="Brief" id="brief" rows="3" class="textbox" maxlength="150">${brief}</textarea>
+					<textarea name="brief" id="brief" rows="3" class="textbox"  maxlength="150">${brief}</textarea>
 				</div>
 
 				<div class="row-form">
 					<label for="content">Content</label>
-					<textarea name="Content" id="content" rows="9" class="textbox" maxlength="1000">${content}</textarea>
+					<textarea name="content" id="content" rows="9" class="textbox" maxlength="1000">${content}</textarea>
 				</div>
 
 				<div class="row-form">					
-					<button class="button" onClick = "validateFormContent()" type="submit" name="submit" value="submit">Submit Button</button>
+					<button class="button" type="submit" name="submit" value="submit">Submit Button</button>
 					<button class="button" type="reset">Reset Button</button>
 				</div>
 			</form>

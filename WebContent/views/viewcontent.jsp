@@ -28,7 +28,7 @@
 }
 
 .viewcontents-container:hover {
-	background-color: lightgray;
+	background-color: rgb(245, 245, 245);
 }
 
 /*Css main*/
@@ -47,7 +47,7 @@
 
 .th-main {
 	text-align: unset;
-	background-color: lightgray;;
+	background-color: rgb(245, 245, 245);;
 	font-size: 150%;
 	padding-bottom: 1%;
 	padding-top: 1%;
@@ -83,7 +83,7 @@
 }
 
 .table-son .tr-son:nth-child(odd) {
-	background-color: lightgray;
+	background-color: rgb(245, 245, 245);
 }
 
 .table-son .tr-son:nth-child(even) {

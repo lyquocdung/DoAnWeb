@@ -143,7 +143,7 @@ b {
 			
 				<form action="EditProfile" method="POST">
 				<div class="body_edt">
-				<i class="alert alert-light text-danger p-0">${message}</i>
+				<i style="margin: 0; padding: 0; color: green" class="alert alert-light text-danger p-0">${message}</i>
 				<input type="hidden" class="text" id="id" name="id"  required value="<c:out value='${showmember.id}' />">
 					<p>
 						<b>First Name</b>
