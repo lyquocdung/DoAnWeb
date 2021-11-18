@@ -23,9 +23,11 @@ public class DeleteContent extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String id = request.getParameter("id");
+		
 		DAOContent dao= new DAOContent();
 		dao.deleteContent(id);
-		response.sendRedirect("ViewContent");
+		
+		request.getRequestDispatcher("viewcontent.tiles").forward(request, response);;
 	}
 
 }

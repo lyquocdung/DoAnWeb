@@ -15,8 +15,8 @@ import model.Content;
 /**
  * Servlet implementation class EditContent
  */
-@WebServlet("/EditContent")
-public class EditContent extends HttpServlet {
+@WebServlet("/LoadEditContent")
+public class LoadEditContent extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -26,16 +26,15 @@ public class EditContent extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		int id = Integer.parseInt(request.getParameter("id"));
-		String title = request.getParameter("title");
-		String brief = request.getParameter("brief");
-		String content = request.getParameter("content");
-		String updatetime = java.time.LocalDateTime.now().toString();
-		
+	
 		DAOContent dao = new DAOContent();
-		dao.editContent(id, title, brief, content, updatetime);
+		// Sau khi edit ID xong thi Show ID ra
+		Content showcontent = dao.getContent(id);
 		
-		request.setAttribute("message", "Update Successfully");
-		request.getRequestDispatcher("editcontent.tiles").forward(request, response);
+		request.setAttribute("id", showcontent.getId());
+		request.setAttribute("title", showcontent.getTitle());
+		request.setAttribute("brief", showcontent.getBrief());
+		request.setAttribute("content", showcontent.getContent());
 	}
 
 }

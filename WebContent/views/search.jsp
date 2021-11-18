@@ -100,11 +100,11 @@
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
 </head>
 <body>
+	<form action="SearchContent" method="post">
 		<div class="container-viewcontent">
 			<div class="row-main">
 				<h1 style="margin-top: 2%;">View Content</h1>
 				<hr />
-				<p style="margin: 0;padding: 0;color: green;font-size: x-large">${message}</p><br />
 				<table class="table-main">
 					<tr class="tr-main">
 						<th class="th-main">View Content List</th>
@@ -118,7 +118,7 @@
 									<th class="th-son">Created Date</th>
 									<th class="th-son">Action</th>
 								</tr>
-								<c:forEach items="${listcontent}" var="content">
+								<c:forEach items="${listsearch}" var="content">
 									<tr class="tr-son">
 										<td class="td-son">${content.id}</td>
 										<td class="td-son">${content.title}</td>
@@ -133,5 +133,6 @@
 				</table>
 			</div>
 		</div>
+	</form>
 </body>
 </html>

@@ -10,13 +10,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import dao.DAOContent;
+import dao.DAOMember;
 import model.Content;
 
 /**
  * Servlet implementation class EditContent
  */
-@WebServlet("/EditContent")
-public class EditContent extends HttpServlet {
+@WebServlet("/EditProfile")
+public class EditProfile extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -26,16 +27,17 @@ public class EditContent extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		int id = Integer.parseInt(request.getParameter("id"));
-		String title = request.getParameter("title");
-		String brief = request.getParameter("brief");
-		String content = request.getParameter("content");
-		String updatetime = java.time.LocalDateTime.now().toString();
+		String firstname = request.getParameter("firstname");
+		String lastname = request.getParameter("lastname");
+		String email = request.getParameter("email");
+		String phone = request.getParameter("phone");
+		String description = request.getParameter("description");
 		
-		DAOContent dao = new DAOContent();
-		dao.editContent(id, title, brief, content, updatetime);
+		DAOMember dao = new DAOMember();
+		dao.editMember(id, firstname, lastname, email, phone, description);
 		
 		request.setAttribute("message", "Update Successfully");
-		request.getRequestDispatcher("editcontent.tiles").forward(request, response);
+		request.getRequestDispatcher("editprofile.tiles").forward(request, response);
 	}
 
 }
